@@ -1,0 +1,141 @@
+{
+    "nav": {
+        "title": "Le Compagnon",
+        "home": "Accueil",
+        "features": "Fonctionnalités",
+        "benefits": "Avantages",
+        "contact": "Contact",
+        "getStarted": "Commencer",
+        "howItWorks": "Comment ça marche"
+    },
+    "hero": {
+        "title": "Transformez Votre Expérience Hôtelière",
+        "subtitle": "Améliorez la satisfaction des clients avec notre solution de gestion hôtelière tout-en-un",
+        "bookDemo": "Réserver une Démo"
+    },
+    "features": {
+        "title": "Fonctionnalités Clés",
+        "foodOrdering": {
+            "title": "Commande de Repas",
+            "desc": "Passez des commandes de service en chambre sans effort via notre interface intuitive"
+        },
+        "incidents": {
+            "title": "Gestion des Incidents",
+            "desc": "Signalez et suivez les incidents pendant votre séjour avec des mises à jour en temps réel"
+        },
+        "activities": {
+            "title": "Réservation d'Activités",
+            "desc": "Parcourez et réservez instantanément des activités et événements spéciaux"
+        },
+        "facilities": {
+            "title": "Accès aux Installations",
+            "desc": "Accès transparent à toutes les commodités de l'hôtel"
+        },
+        "sentiment": {
+            "title": "Analyse IA des Sentiments",
+            "desc": "Détection intelligente des émotions dans les demandes pour une meilleure priorisation des réponses"
+        }
+    },
+    "benefits": {
+        "title": "Pourquoi Choisir The Companion?",
+        "experience": {
+            "title": "Expérience Client Améliorée",
+            "desc": "Offrez une expérience numérique fluide à vos clients"
+        },
+        "efficiency": {
+            "title": "Efficacité Opérationnelle",
+            "desc": "Rationalisez les opérations hôtelières et réduisez la charge de travail manuelle"
+        },
+        "analytics": {
+            "title": "Analyses en Temps Réel",
+            "desc": "Prenez des décisions basées sur des données avec des informations complètes"
+        }
+    },
+    "contact": {
+        "title": "CONTACTEZ-NOUS",
+        "subtitle": "Nous Aimerions Vous Entendre",
+        "office": "Notre Bureau",
+        "location": "Dely Brahim, Alger",
+        "email": "Email de Contact",
+        "phone": "Numéro de Téléphone",
+        "form": {
+            "firstName": "Prénom",
+            "lastName": "Nom",
+            "email": "Votre Email",
+            "phone": "Votre Téléphone",
+            "message": "Votre Message",
+            "send": "ENVOYER VOTRE DEMANDE",
+            "sending": "Envoi en cours...",
+            "success": "Message envoyé avec succès!",
+            "error": "Une erreur s'est produite!",
+            "errorNetwork": "Échec de l'envoi du message. Veuillez réessayer."
+        }
+    },
+    "footer": {
+        "description": "Solutions hôtelières avancées pour l'industrie hôtelière moderne",
+        "quickLinks": "Liens Rapides",
+        "contact": "Contact",
+        "followUs": "Suivez-nous",
+        "copyright": "© {year} The Companion. Tous droits réservés.",
+        "legal": "Légal",
+        "privacy": "Politique de Confidentialité"
+    },
+    "video": {
+        "title": "Voir Comment Ça Marche",
+        "description": "Regardez notre vidéo de présentation rapide pour en savoir plus sur notre plateforme"
+    },
+    "privacy": {
+        "title": "Politique de Confidentialité",
+        "intro": {
+            "title": "1. Introduction",
+            "content": "Chez Digiways, nous prenons votre confidentialité au sérieux. Cette politique de confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous utilisez notre site web et nos services."
+        },
+        "collection": {
+            "title": "2. Informations Collectées",
+            "content": "Nous collectons les informations que vous nous fournissez volontairement lorsque vous :",
+            "items": {
+                "item1": "Remplissez des formulaires sur notre site",
+                "item2": "Nous contactez par email ou téléphone",
+                "item3": "Vous abonnez à notre newsletter",
+                "item4": "Demandez une démonstration de nos services"
+            }
+        },
+        "usage": {
+            "title": "3. Utilisation de Vos Informations",
+            "content": "Nous utilisons les informations collectées à diverses fins :",
+            "items": {
+                "item1": "Pour fournir et maintenir nos services",
+                "item2": "Pour vous informer des changements de nos services",
+                "item3": "Pour assurer le support client",
+                "item4": "Pour recueillir des analyses et améliorer nos services"
+            }
+        },
+        "protection": {
+            "title": "4. Protection des Données",
+            "content": "Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos informations personnelles contre tout accès, modification, divulgation ou destruction non autorisés."
+        },
+        "rights": {
+            "title": "5. Vos Droits",
+            "content": "Vous avez le droit de :",
+            "items": {
+                "item1": "Accéder à vos informations personnelles",
+                "item2": "Corriger les données inexactes",
+                "item3": "Demander la suppression de vos données",
+                "item4": "Vous opposer au traitement de vos informations",
+                "item5": "Demander la portabilité des données"
+            }
+        },
+        "contact": {
+            "title": "6. Nous Contacter",
+            "content": "Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter :",
+            "email": "Email",
+            "phone": "Téléphone",
+            "address": "Adresse"
+        },
+        "changes": {
+            "title": "7. Modifications de cette Politique",
+            "content": "Nous pouvons mettre à jour notre politique de confidentialité de temps à autre. Nous vous informerons de tout changement en publiant la nouvelle politique de confidentialité sur cette page. Les modifications sont effectives immédiatement après leur publication.",
+            "lastUpdated": "Dernière mise à jour : 18 janvier 2025"
+        }
+    }
+}

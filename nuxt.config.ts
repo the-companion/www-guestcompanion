@@ -1,14 +1,14 @@
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/i18n", "@nuxtjs/tailwindcss", "@nuxt/icon"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/tailwindcss", "nuxt-icon"],
 
   i18n: {
     defaultLocale: "en",
     langDir: "locales",
     types: "composition",
     locales: [
-      { code: "en", file: "en.json", language: "en-US" },
-      { code: "fr", file: "fr.json", language: "fr-FR" },
-      { code: "ar", file: "ar.json", language: "ar-AR" },
+      { code: "en", file: "en.json", iso: "en-US" },
+      { code: "fr", file: "fr.json", iso: "fr-FR" },
+      { code: "ar", file: "ar.json", iso: "ar-AR" },
     ],
   },
 
