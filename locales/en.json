@@ -1,0 +1,141 @@
+{
+    "nav": {
+        "title": "The Companion",
+        "home": "Home",
+        "features": "Features",
+        "benefits": "Benefits",
+        "contact": "Contact",
+        "getStarted": "Get Started",
+        "howItWorks": "How it Works"
+    },
+    "hero": {
+        "title": "Transform Your Hotel Experience",
+        "subtitle": "Elevate guest satisfaction with our all-in-one hotel management solution",
+        "bookDemo": "Book Demo"
+    },
+    "features": {
+        "title": "Key Features",
+        "foodOrdering": {
+            "title": "Food Ordering",
+            "desc": "Place room service orders effortlessly through our intuitive interface"
+        },
+        "incidents": {
+            "title": "Incident Management",
+            "desc": "Report and track incidents during your stay with real-time updates"
+        },
+        "activities": {
+            "title": "Activity Booking",
+            "desc": "Browse and book hotel activities and special events instantly"
+        },
+        "facilities": {
+            "title": "Facility Access",
+            "desc": "Seamless access to all hotel amenities and facilities"
+        },
+        "sentiment": {
+            "title": "AI Sentiment Analysis",
+            "desc": "Smart detection of guest emotions in requests for better and faster response prioritization"
+        }
+    },
+    "benefits": {
+        "title": "Why Choose The Companion?",
+        "experience": {
+            "title": "Enhanced Guest Experience",
+            "desc": "Provide a seamless, digital-first experience for your guests"
+        },
+        "efficiency": {
+            "title": "Operational Efficiency",
+            "desc": "Streamline hotel operations and reduce manual workload"
+        },
+        "analytics": {
+            "title": "Real-time Analytics",
+            "desc": "Make data-driven decisions with comprehensive insights"
+        }
+    },
+    "contact": {
+        "title": "GET IN TOUCH",
+        "subtitle": "We'd Love to Hear from You",
+        "office": "Our Office",
+        "location": "BOIS DES CARS 01, Dely Brahim, ALGERIE",
+        "email": "Contact Email",
+        "phone": "Phone Number",
+        "form": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Your Email",
+            "phone": "Your Phone",
+            "message": "Your Message",
+            "send": "SEND YOUR INQUIRY",
+            "sending": "Sending...",
+            "success": "Message sent successfully!",
+            "error": "Something went wrong!",
+            "errorNetwork": "Failed to send message. Please try again."
+        }
+    },
+    "footer": {
+        "description": "Advanced hotel solutions for the modern hospitality industry",
+        "quickLinks": "Quick Links",
+        "contact": "Contact",
+        "followUs": "Follow Us",
+        "copyright": "© {year} The Companion. All rights reserved.",
+        "legal": "Legal",
+        "privacy": "Privacy Policy"
+    },
+    "video": {
+        "title": "See How It Works",
+        "description": "Watch our quick overview video to learn more about our platform"
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "intro": {
+            "title": "1. Introduction",
+            "content": "At Digiways, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services."
+        },
+        "collection": {
+            "title": "2. Information We Collect",
+            "content": "We collect information that you voluntarily provide to us when you:",
+            "items": {
+                "item1": "Fill out forms on our website",
+                "item2": "Contact us through email or phone",
+                "item3": "Subscribe to our newsletter",
+                "item4": "Request a demo of our services"
+            }
+        },
+        "usage": {
+            "title": "3. How We Use Your Information",
+            "content": "We use the collected information for various purposes:",
+            "items": {
+                "item1": "To provide and maintain our services",
+                "item2": "To notify you about changes to our services",
+                "item3": "To provide customer support",
+                "item4": "To gather analysis or valuable information to improve our services"
+            }
+        },
+        "protection": {
+            "title": "4. Data Protection",
+            "content": "We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction."
+        },
+        "rights": {
+            "title": "5. Your Rights",
+            "content": "You have the right to:",
+            "items": {
+                "item1": "Access your personal information",
+                "item2": "Correct inaccurate data",
+                "item3": "Request deletion of your data",
+                "item4": "Object to our processing of your information",
+                "item5": "Request data portability"
+            }
+        },
+        "contact": {
+            "title": "6. Contact Us",
+            "content": "If you have any questions about this Privacy Policy, please contact us at:",
+            "email": "Email",
+            "phone": "Phone",
+            "address": "Address"
+        },
+        "changes": {
+            "title": "7. Changes to This Policy",
+            "content": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. Changes are effective immediately upon posting.",
+            "lastUpdated": "Last updated: January 18, 2025"
+        }
+    }
+}
