@@ -77,11 +77,10 @@
           </h2>
           <p class="text-gray-600 mb-4">{{ $t("privacy.contact.content") }}</p>
           <ul class="text-gray-600 mb-4">
-            <li>{{ $t("privacy.contact.email") }}: contact@digiways.io</li>
-            <li>{{ $t("privacy.contact.phone") }}: +213 560 58 92 26</li>
+            <li>{{ $t("privacy.contact.email") }}: contact@guestcompanion.com</li>
+            <li>{{ $t("privacy.contact.phone") }}: +1 (514) 419 3322</li>
             <li>
-              {{ $t("privacy.contact.address") }}: BOIS DES CARS 01, Dely
-              Brahim, ALGERIE
+              {{ $t("privacy.contact.address") }}: 30 N Gould St, STE R, Sheridan, WYOMING, 82801
             </li>
           </ul>
         </section>
@@ -107,8 +106,8 @@ useHead({
     locale.value === "ar"
       ? "سياسة الخصوصية - ديجيوايز"
       : locale.value === "fr"
-      ? "Politique de Confidentialité - Digiways"
-      : "Privacy Policy - Digiways",
+      ? "Politique de Confidentialité - Guest Companion"
+      : "Privacy Policy - Guest Companion",
   meta: [
     {
       name: "description",
@@ -116,8 +115,8 @@ useHead({
         locale.value === "ar"
           ? "سياسة الخصوصية لموقع وخدمات ديجيوايز"
           : locale.value === "fr"
-          ? "Politique de confidentialité pour le site web et les services de Digiways"
-          : "Privacy Policy for Digiways website and services",
+          ? "Politique de confidentialité pour le site web et les services de Guest Companion"
+          : "Privacy Policy for Guest Companion website and services",
     },
   ],
 });

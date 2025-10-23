@@ -125,12 +125,12 @@ const contactInfo = [
   {
     icon: "mdi:email",
     title: "contact.email",
-    value: "contact@digiways.io",
+    value: "contact@guestcompanion.com",
   },
   {
     icon: "mdi:phone",
     title: "contact.phone",
-    value: "+213 560 58 92 26",
+    value: "+1 (514) 419 3322",
   },
 ];
 const formFields = [
@@ -150,8 +150,8 @@ const formData = ref({
   email: "",
   phone: "",
   message: "",
-  subject: "New Contact Form Submission from The Companion",
-  from_name: "The Companion Website",
+  subject: "New Contact Form Submission from Guest Companion",
+  from_name: "Guest Companion Website",
 });
 
 const handleSubmit = async () => {
@@ -186,8 +186,8 @@ const handleSubmit = async () => {
         email: "",
         phone: "",
         message: "",
-        subject: "New Contact Form Submission from The Companion",
-        from_name: "The Companion Website",
+        subject: "New Contact Form Submission from Guest Companion",
+        from_name: "Guest Companion Website",
       };
     } else {
       submitStatus.value = {

@@ -37,7 +37,7 @@
         }
     },
     "benefits": {
-        "title": "لماذا تختار The Companion؟",
+        "title": "لماذا تختار Guest Companion؟",
         "experience": {
             "title": "تجربة ضيوف محسنة",
             "desc": "قدم تجربة رقمية سلسة لضيوفك"
@@ -55,7 +55,7 @@
         "title": "تواصل معنا",
         "subtitle": "نود أن نسمع منك",
         "office": "مكتبنا",
-        "location": "دالي إبراهيم ولاية الجزائر",
+        "location": "30 N Gould St, STE R, Sheridan, WYOMING, 82801",
         "email": "البريد الإلكتروني",
         "phone": "رقم الهاتف",
         "form": {
@@ -76,9 +76,10 @@
         "quickLinks": "روابط سريعة",
         "contact": "اتصل بنا",
         "followUs": "تابعنا",
-        "copyright": "© {year} The Companion. جميع الحقوق محفوظة.",
+        "copyright": "© {year} Guest Companion. جميع الحقوق محفوظة.",
         "legal": "قانوني",
-        "privacy": "سياسة الخصوصية"
+        "privacy": "سياسة الخصوصية",
+        "companyAttribution": "Guest Companion هو منتج من"
     },
     "video": {
         "title": "شاهد كيف يعمل",

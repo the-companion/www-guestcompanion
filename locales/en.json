@@ -1,6 +1,6 @@
 {
     "nav": {
-        "title": "The Companion",
+        "title": "Guest Companion",
         "home": "Home",
         "features": "Features",
         "benefits": "Benefits",
@@ -37,7 +37,7 @@
         }
     },
     "benefits": {
-        "title": "Why Choose The Companion?",
+        "title": "Why Choose Guest Companion?",
         "experience": {
             "title": "Enhanced Guest Experience",
             "desc": "Provide a seamless, digital-first experience for your guests"
@@ -55,7 +55,7 @@
         "title": "GET IN TOUCH",
         "subtitle": "We'd Love to Hear from You",
         "office": "Our Office",
-        "location": "BOIS DES CARS 01, Dely Brahim, ALGERIE",
+        "location": "30 N Gould St, STE R, Sheridan, WYOMING, 82801",
         "email": "Contact Email",
         "phone": "Phone Number",
         "form": {
@@ -76,9 +76,10 @@
         "quickLinks": "Quick Links",
         "contact": "Contact",
         "followUs": "Follow Us",
-        "copyright": "© {year} The Companion. All rights reserved.",
+        "copyright": "© {year} Guest Companion. All rights reserved.",
         "legal": "Legal",
-        "privacy": "Privacy Policy"
+        "privacy": "Privacy Policy",
+        "companyAttribution": "Guest Companion is a product by"
     },
     "video": {
         "title": "See How It Works",
@@ -88,7 +89,7 @@
         "title": "Privacy Policy",
         "intro": {
             "title": "1. Introduction",
-            "content": "At Digiways, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services."
+            "content": "At Guest Companion, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services."
         },
         "collection": {
             "title": "2. Information We Collect",

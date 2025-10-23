@@ -29,12 +29,13 @@
             v-for="item in navItems"
             :key="item"
             :to="`/#${item}`"
-            class="font-medium transition-all duration-300 hover:scale-105"
+            class="font-medium transition-all duration-300 hover:scale-105 cursor-pointer"
             :class="[
               isScrolled 
                 ? 'text-gray-700 hover:text-gray-900' 
                 : 'text-white hover:text-gray-200'
             ]"
+            @click.prevent="scrollToSection(item)"
           >
             {{ $t(`nav.${item}`) }}
           </NuxtLink>
@@ -95,7 +96,7 @@
             :key="item"
             :to="`/#${item}`"
             class="block text-gray-700 hover:text-gray-900 font-medium transition-colors duration-300"
-            @click="closeMobileMenu"
+            @click="closeMobileMenu(); scrollToSection(item)"
           >
             {{ $t(`nav.${item}`) }}
           </NuxtLink>
@@ -138,6 +139,20 @@ const toggleMobileMenu = () => {
 
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
+};
+
+// Smooth scroll function
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const navbarHeight = 64; // Height of the fixed navbar
+    const elementPosition = element.offsetTop - navbarHeight;
+    
+    window.scrollTo({
+      top: elementPosition,
+      behavior: 'smooth'
+    });
+  }
 };
 
 onMounted(() => {

@@ -92,12 +92,12 @@ const contactInfo = [
   {
     icon: "mdi:email",
     title: "contact.email",
-    value: "contact@digiways.io",
+    value: "contact@guestcompanion.com",
   },
   {
     icon: "mdi:phone",
     title: "contact.phone",
-    value: "+213 560 58 92 26",
+    value: "+1 (514) 419 3322",
   },
 ];
 

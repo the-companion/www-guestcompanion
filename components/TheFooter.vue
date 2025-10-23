@@ -12,6 +12,21 @@
           />
 
           <p class="text-gray-400">{{ $t("footer.description") }}</p>
+          
+          <!-- Company Attribution -->
+          <div class="mt-4 pt-4 border-t border-gray-600">
+            <p class="text-sm text-gray-500">
+              {{ $t("footer.companyAttribution") }}
+              <a 
+                href="https://bewisee.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-gray-400 hover:text-white transition-colors duration-300 font-medium"
+              >
+                bewisee.com
+              </a>
+            </p>
+          </div>
         </div>
 
         <div>
@@ -22,7 +37,8 @@
             <li v-for="link in quickLinks" :key="link">
               <NuxtLink
                 :to="`/#${link}`"
-                class="text-gray-400 hover:text-white transition duration-300"
+                class="text-gray-400 hover:text-white transition duration-300 cursor-pointer"
+                @click.prevent="scrollToSection(link)"
               >
                 {{ $t(`nav.${link}`) }}
               </NuxtLink>
@@ -87,9 +103,9 @@ const isRTL = computed(() => locale.value.dir === "rtl");
 const quickLinks = ["features", "benefits", "contact"];
 
 const contacts = [
-  { icon: "mdi:email", value: "contact@digiways.io" },
-  { icon: "mdi:phone", value: "+213 560 58 92 26" },
-  { icon: "mdi:map-marker", value: "BOIS DES CARS 01, Dely Brahim, ALGERIE" },
+  { icon: "mdi:email", value: "contact@guestcompanion.com" },
+  { icon: "mdi:phone", value: "+1 (514) 419 3322" },
+  { icon: "mdi:map-marker", value: "30 N Gould St, STE R, Sheridan, WYOMING, 82801" },
 ];
 
 const socials = [
@@ -97,12 +113,26 @@ const socials = [
   {
     name: "LinkedIn",
     icon: "mdi:linkedin",
-    url: "https://www.linkedin.com/company/digiways-io",
+    url: "https://www.linkedin.com/company/guestcompanion",
   },
   {
     name: "Facebook",
     icon: "mdi:facebook",
-    url: "https://www.facebook.com/digiways.io",
+    url: "https://www.facebook.com/guestcompanion.com",
   },
 ];
+
+// Smooth scroll function
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const navbarHeight = 64; // Height of the fixed navbar
+    const elementPosition = element.offsetTop - navbarHeight;
+    
+    window.scrollTo({
+      top: elementPosition,
+      behavior: 'smooth'
+    });
+  }
+};
 </script>

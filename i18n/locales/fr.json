@@ -37,7 +37,7 @@
         }
     },
     "benefits": {
-        "title": "Pourquoi Choisir The Companion?",
+        "title": "Pourquoi Choisir Guest Companion?",
         "experience": {
             "title": "Expérience Client Améliorée",
             "desc": "Offrez une expérience numérique fluide à vos clients"
@@ -55,7 +55,7 @@
         "title": "CONTACTEZ-NOUS",
         "subtitle": "Nous Aimerions Vous Entendre",
         "office": "Notre Bureau",
-        "location": "Dely Brahim, Alger",
+        "location": "30 N Gould St, STE R, Sheridan, WYOMING, 82801",
         "email": "Email de Contact",
         "phone": "Numéro de Téléphone",
         "form": {
@@ -76,9 +76,10 @@
         "quickLinks": "Liens Rapides",
         "contact": "Contact",
         "followUs": "Suivez-nous",
-        "copyright": "© {year} The Companion. Tous droits réservés.",
+        "copyright": "© {year} Guest Companion. Tous droits réservés.",
         "legal": "Légal",
-        "privacy": "Politique de Confidentialité"
+        "privacy": "Politique de Confidentialité",
+        "companyAttribution": "Guest Companion est un produit de"
     },
     "video": {
         "title": "Voir Comment Ça Marche",
@@ -88,7 +89,7 @@
         "title": "Politique de Confidentialité",
         "intro": {
             "title": "1. Introduction",
-            "content": "Chez Digiways, nous prenons votre confidentialité au sérieux. Cette politique de confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous utilisez notre site web et nos services."
+            "content": "Chez Guest Companion, nous prenons votre confidentialité au sérieux. Cette politique de confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous utilisez notre site web et nos services."
         },
         "collection": {
             "title": "2. Informations Collectées",
