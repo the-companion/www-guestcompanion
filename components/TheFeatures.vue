@@ -23,11 +23,23 @@
           class="group relative"
           :style="{ animationDelay: `${index * 150}ms` }"
         >
-          <!-- Visa-Style Card -->
-          <div class="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-gray-200 overflow-hidden card-contour">
-            <!-- Card Background Pattern -->
-            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-gray-100 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-gray-50 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+          <!-- Enhanced Card with Dynamic Background -->
+          <div 
+            class="relative rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 overflow-hidden card-contour"
+            :class="feature.bgClass"
+          >
+            <!-- Dynamic Background Pattern -->
+            <div 
+              class="absolute top-0 right-0 w-32 h-32 rounded-full -translate-y-16 translate-x-16 opacity-20"
+              :class="feature.patternClass"
+            ></div>
+            <div 
+              class="absolute bottom-0 left-0 w-24 h-24 rounded-full translate-y-12 -translate-x-12 opacity-15"
+              :class="feature.patternClass2"
+            ></div>
+            
+            <!-- Subtle overlay for better text readability -->
+            <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
             
             <!-- Card Content -->
             <div class="relative z-10">
@@ -48,8 +60,11 @@
                 </div>
                 
                 <!-- Feature Icon Badge -->
-                <div class="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Icon :name="feature.icon" class="w-8 h-8 text-gray-600" />
+                <div 
+                  class="w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                  :class="feature.iconBgClass"
+                >
+                  <Icon :name="feature.icon" class="w-8 h-8" :class="feature.iconClass" />
                 </div>
               </div>
             </div>
@@ -83,11 +98,46 @@
 
 <script setup>
 const features = {
-  foodOrdering: { icon: "mdi:food-fork-drink" },
-  incidents: { icon: "mdi:alert-circle-outline" },
-  activities: { icon: "mdi:calendar-blank" },
-  facilities: { icon: "mdi:key-variant" },
-  sentiment: { icon: "mdi:emoticon-cool-outline" },
+  foodOrdering: { 
+    icon: "mdi:food-fork-drink",
+    bgClass: "bg-gradient-to-br from-orange-50 via-orange-100 to-yellow-50 border-orange-200",
+    patternClass: "bg-gradient-to-br from-orange-200 to-orange-300",
+    patternClass2: "bg-gradient-to-tr from-yellow-200 to-orange-200",
+    iconBgClass: "bg-gradient-to-br from-orange-200 to-orange-300",
+    iconClass: "text-orange-700"
+  },
+  incidents: { 
+    icon: "mdi:alert-circle-outline",
+    bgClass: "bg-gradient-to-br from-red-50 via-red-100 to-pink-50 border-red-200",
+    patternClass: "bg-gradient-to-br from-red-200 to-red-300",
+    patternClass2: "bg-gradient-to-tr from-pink-200 to-red-200",
+    iconBgClass: "bg-gradient-to-br from-red-200 to-red-300",
+    iconClass: "text-red-700"
+  },
+  activities: { 
+    icon: "mdi:calendar-blank",
+    bgClass: "bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-50 border-blue-200",
+    patternClass: "bg-gradient-to-br from-blue-200 to-blue-300",
+    patternClass2: "bg-gradient-to-tr from-indigo-200 to-blue-200",
+    iconBgClass: "bg-gradient-to-br from-blue-200 to-blue-300",
+    iconClass: "text-blue-700"
+  },
+  facilities: { 
+    icon: "mdi:key-variant",
+    bgClass: "bg-gradient-to-br from-green-50 via-green-100 to-emerald-50 border-green-200",
+    patternClass: "bg-gradient-to-br from-green-200 to-green-300",
+    patternClass2: "bg-gradient-to-tr from-emerald-200 to-green-200",
+    iconBgClass: "bg-gradient-to-br from-green-200 to-green-300",
+    iconClass: "text-green-700"
+  },
+  sentiment: { 
+    icon: "mdi:emoticon-cool-outline",
+    bgClass: "bg-gradient-to-br from-purple-50 via-purple-100 to-violet-50 border-purple-200",
+    patternClass: "bg-gradient-to-br from-purple-200 to-purple-300",
+    patternClass2: "bg-gradient-to-tr from-violet-200 to-purple-200",
+    iconBgClass: "bg-gradient-to-br from-purple-200 to-purple-300",
+    iconClass: "text-purple-700"
+  },
 };
 
 // Intersection Observer for animations
