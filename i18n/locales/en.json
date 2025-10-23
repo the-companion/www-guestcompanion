@@ -33,7 +33,7 @@
         },
         "sentiment": {
             "title": "AI Sentiment Analysis",
-            "desc": "Smart detection of guest emotions in requests for better and faster response prioritization"
+            "desc": "Smart detection of guest emotions in requests for faster response prioritization"
         }
     },
     "benefits": {

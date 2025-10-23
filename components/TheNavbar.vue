@@ -17,7 +17,7 @@
           <img
             :src="logoUrl"
             alt="Hotel Benefits"
-            class="h-10 w-auto transition-all duration-300"
+            class="h-8 w-auto transition-all duration-300"
           />
         </NuxtLink>
 
