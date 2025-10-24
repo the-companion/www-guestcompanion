@@ -34,7 +34,16 @@
         "sentiment": {
             "title": "AI Sentiment Analysis",
             "desc": "Smart detection of guest emotions in requests for faster response prioritization"
+        },
+        "customFeatures": {
+            "title": "Custom Features",
+            "desc": "Tailored solutions designed specifically for your hotel's unique needs and requirements"
         }
+    },
+    "cta": {
+        "title": "Ready to Transform Your Hotel?",
+        "description": "Experience the future of hotel management with our comprehensive suite of features designed for luxury hospitality.",
+        "button": "Book a Demo"
     },
     "benefits": {
         "title": "Why Choose Guest Companion?",

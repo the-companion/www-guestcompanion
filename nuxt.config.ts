@@ -12,11 +12,11 @@ export default defineNuxtConfig({
     defaultLocale: "en",
     langDir: "locales",
     types: "composition",
-    strategy: "prefix_except_default",
+    strategy: "no_prefix",
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
-      redirectOn: "root",
+      redirectOn: "no prefix",
       alwaysRedirect: false,
       fallbackLocale: "en"
     },

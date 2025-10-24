@@ -8,7 +8,7 @@
       <div class="flex flex-col md:flex-row gap-12">
         <!-- Contact Info -->
         <div
-          class="md:w-1/2 bg-gradient-to-r from-[#1D2F27] to-[#243932] rounded-lg p-8 text-white"
+          class="md:w-1/2 bg-gradient-to-r from-gray-900 to-black rounded-lg p-8 text-white"
         >
           <!-- <h3 class="text-lg font-medium mb-2">{{ $t("contact.title") }}</h3> -->
           <h2 class="text-3xl font-bold mb-12">{{ $t("contact.subtitle") }}</h2>
@@ -23,7 +23,7 @@
               }"
             >
               <div
-                class="w-12 h-12 rounded-full bg-[#3B5146] flex items-center justify-center"
+                class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center"
               >
                 <Icon :name="item.icon" class="w-6 h-6" />
               </div>
@@ -97,7 +97,7 @@
 
             <button
               type="submit"
-              class="bg-[#1D2F27] text-white px-8 py-3 rounded-lg hover:bg-[#3B5146] transition duration-300"
+              class="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-black transition duration-300"
               :disabled="isSubmitting"
             >
               {{

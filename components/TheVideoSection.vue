@@ -1,14 +1,6 @@
 <!-- components/TheVideoSection.vue -->
 <template>
-  <!-- <section
-    id="howItWorks"
-    class="py-16 bg-gradient-to-r from-gray-800 to-gray-700"
-  > -->
-
-  <section
-    id="howItWorks"
-    class="py-16 bg-gradient-to-r from-[#1D2F27] to-[#243932]"
-  >
+  <section id="howItWorks" class="py-16 bg-gradient-to-r from-gray-800 to-gray-700">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold mb-4 text-white">
@@ -34,9 +26,9 @@
 const { locale } = useI18n();
 
 const videos = {
-  en: "https://www.youtube.com/embed/P8tTc-WHtEo",
-  fr: "https://www.youtube.com/embed/NVvvWsjyNJI",
-  ar: "https://www.youtube.com/embed/P8tTc-WHtEo",
+  en: "https://www.youtube.com/embed/MKry16OZSRo?rel=0&modestbranding=1&showinfo=0&controls=1&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0&title=0",
+  fr: "https://www.youtube.com/embed/MKry16OZSRo?rel=0&modestbranding=1&showinfo=0&controls=1&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0&title=0", // Using English video for French as no French video provided
+  ar: "https://www.youtube.com/embed/HOt3ecTfSmg?rel=0&modestbranding=1&showinfo=0&controls=1&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0&title=0",
 };
 
 const videoUrl = computed(() => videos[locale.value] || videos.en);

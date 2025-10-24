@@ -34,7 +34,16 @@
         "sentiment": {
             "title": "Analyse IA des Sentiments",
             "desc": "Détection intelligente des émotions dans les demandes pour une meilleure priorisation des réponses"
+        },
+        "customFeatures": {
+            "title": "Fonctionnalités Personnalisées",
+            "desc": "Solutions sur mesure conçues spécifiquement pour les besoins et exigences uniques de votre hôtel"
         }
+    },
+    "cta": {
+        "title": "Prêt à Transformer Votre Hôtel ?",
+        "description": "Découvrez l'avenir de la gestion hôtelière avec notre suite complète de fonctionnalités conçues pour l'hospitalité de luxe.",
+        "button": "Réserver une Démo"
     },
     "benefits": {
         "title": "Pourquoi Choisir Guest Companion?",

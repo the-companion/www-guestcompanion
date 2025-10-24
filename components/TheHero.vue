@@ -5,17 +5,23 @@
     <HeroImageSlider class="absolute inset-0" />
     
     <!-- Text overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent flex items-center">
+    <div 
+      class="absolute inset-0 flex items-center"
+      :class="isRTL ? 'bg-gradient-to-l from-black/50 via-black/30 to-transparent' : 'bg-gradient-to-r from-black/50 via-black/30 to-transparent'"
+    >
       <div class="max-w-6xl mx-auto px-4 w-full">
         <div 
-          class="text-white text-center md:text-left"
-          :class="{ 'md:text-right': isRTL }"
+          class="text-white text-center"
+          :class="isRTL ? 'md:text-right' : 'md:text-left'"
         >
           <div class="animate-fade-in-up">
             <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-2xl">
               {{ $t("hero.title") }}
             </h1>
-            <p class="text-xl md:text-3xl mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto md:mx-0 drop-shadow-lg">
+            <p 
+              class="text-xl md:text-3xl mb-8 text-gray-200 leading-relaxed max-w-3xl drop-shadow-lg"
+              :class="isRTL ? 'mx-auto md:mr-0 md:ml-auto' : 'mx-auto md:mx-0'"
+            >
               {{ $t("hero.subtitle") }}
             </p>
             <a
@@ -32,7 +38,10 @@
     </div>
     
     <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+    <div 
+      class="absolute bottom-8 text-white animate-bounce"
+      :class="isRTL ? 'right-8' : 'left-1/2 transform -translate-x-1/2'"
+    >
       <div class="flex flex-col items-center">
         <span class="text-sm mb-2 opacity-75">Scroll to explore</span>
         <Icon name="heroicons:chevron-down" class="w-6 h-6" />
@@ -43,7 +52,7 @@
 
 <script setup>
 const { locale } = useI18n();
-const isRTL = computed(() => locale.value.dir === "rtl");
+const isRTL = computed(() => locale.value === "ar");
 </script>
 
 <style scoped>

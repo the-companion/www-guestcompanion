@@ -1,6 +1,6 @@
 <!-- components/TheFooter.vue -->
 <template>
-  <footer class="bg-gradient-to-r from-[#1D2F27] to-[#243932] text-white py-12">
+  <footer class="bg-gradient-to-r from-gray-900 to-black text-white py-12">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>

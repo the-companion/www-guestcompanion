@@ -1,6 +1,6 @@
 <!-- layouts/default.vue -->
 <template>
-  <div :dir="$i18n.locale.dir">
+  <div :dir="isRTL ? 'rtl' : 'ltr'">
     <TheNavbar />
     <main>
       <slot />
@@ -11,4 +11,5 @@
 
 <script setup>
 const { locale } = useI18n();
+const isRTL = computed(() => locale.value === "ar");
 </script>

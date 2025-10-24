@@ -52,14 +52,8 @@
                 {{ $t(`features.${key}.desc`) }}
               </p>
               
-              <!-- Card Action Button -->
-              <div class="flex items-center justify-between">
-                <div class="flex items-center text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
-                  <span class="text-sm font-medium mr-2">Learn More</span>
-                  <Icon name="heroicons:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </div>
-                
-                <!-- Feature Icon Badge -->
+              <!-- Feature Icon Badge -->
+              <div class="flex justify-end">
                 <div 
                   class="w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
                   :class="feature.iconBgClass"
@@ -78,9 +72,9 @@
       <!-- Call to Action -->
       <div class="text-center">
         <div class="inline-block bg-white rounded-3xl p-8 shadow-lg border-2 border-gray-200 card-contour">
-          <h3 class="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Hotel?</h3>
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">{{ $t("cta.title") }}</h3>
           <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Experience the future of hotel management with our comprehensive suite of features designed for luxury hospitality.
+            {{ $t("cta.description") }}
           </p>
           <a
             href="https://calendly.com/mehdi-atmani/30min"
@@ -88,7 +82,7 @@
             rel="noopener noreferrer"
             class="inline-block bg-gray-900 text-white px-10 py-4 rounded-xl hover:bg-gray-800 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105"
           >
-            Book a Demo
+            {{ $t("cta.button") }}
           </a>
         </div>
       </div>
@@ -137,6 +131,14 @@ const features = {
     patternClass2: "bg-gradient-to-tr from-violet-200 to-purple-200",
     iconBgClass: "bg-gradient-to-br from-purple-200 to-purple-300",
     iconClass: "text-purple-700"
+  },
+  customFeatures: { 
+    icon: "mdi:cog-outline",
+    bgClass: "bg-gradient-to-br from-teal-50 via-teal-100 to-cyan-50 border-teal-200",
+    patternClass: "bg-gradient-to-br from-teal-200 to-teal-300",
+    patternClass2: "bg-gradient-to-tr from-cyan-200 to-teal-200",
+    iconBgClass: "bg-gradient-to-br from-teal-200 to-teal-300",
+    iconClass: "text-teal-700"
   },
 };
 

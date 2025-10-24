@@ -25,10 +25,9 @@
           class="hidden md:flex space-x-8"
           :class="{ 'space-x-reverse': isRTL }"
         >
-          <NuxtLink
+          <button
             v-for="item in navItems"
             :key="item"
-            :to="`/#${item}`"
             class="font-medium transition-all duration-300 hover:scale-105 cursor-pointer"
             :class="[
               isScrolled 
@@ -38,7 +37,7 @@
             @click.prevent="scrollToSection(item)"
           >
             {{ $t(`nav.${item}`) }}
-          </NuxtLink>
+          </button>
         </div>
 
         <div
@@ -115,15 +114,14 @@
         class="md:hidden bg-white/95 backdrop-blur-md border-t border-white/20 shadow-lg"
       >
         <div class="px-4 py-4 space-y-4">
-          <NuxtLink
+          <button
             v-for="item in navItems"
             :key="item"
-            :to="`/#${item}`"
-            class="block text-gray-700 hover:text-gray-900 font-medium transition-colors duration-300"
-            @click="closeMobileMenu(); scrollToSection(item)"
+            class="block w-full text-left text-gray-700 hover:text-gray-900 font-medium transition-colors duration-300"
+            @click.prevent="closeMobileMenu(); scrollToSection(item)"
           >
             {{ $t(`nav.${item}`) }}
-          </NuxtLink>
+          </button>
           
           <!-- Mobile Language Selector -->
           <div class="border-t border-gray-200 pt-4 mt-4">
@@ -151,7 +149,7 @@
 </template>
 
 <script setup>
-const { locale, locales } = useI18n();
+const { locale, locales, setLocale } = useI18n();
 const router = useRouter();
 const switchLocalePath = useSwitchLocalePath();
 
@@ -219,6 +217,15 @@ const getCurrentLanguageName = () => {
 
 // Smooth scroll function
 const scrollToSection = (sectionId) => {
+  // Ensure locale is preserved before scrolling
+  if (process.client) {
+    const savedLocale = localStorage.getItem('preferred-locale');
+    if (savedLocale && savedLocale !== locale.value) {
+      console.log('Restoring locale before scroll:', savedLocale);
+      setLocale(savedLocale);
+    }
+  }
+  
   const element = document.getElementById(sectionId);
   if (element) {
     const navbarHeight = 64; // Height of the fixed navbar
@@ -233,9 +240,12 @@ const scrollToSection = (sectionId) => {
 
 // Close dropdowns when clicking outside
 const handleClickOutside = (event) => {
+  // Only close language dropdown if clicking outside of it
   if (languageDropdown.value && !languageDropdown.value.contains(event.target)) {
     isLanguageDropdownOpen.value = false;
   }
+  
+  // Don't interfere with menu item clicks - they should preserve language state
 };
 
 // Watch for locale changes to ensure persistence
@@ -245,6 +255,20 @@ watch(locale, (newLocale, oldLocale) => {
     // Store the locale preference in localStorage
     if (process.client) {
       localStorage.setItem('preferred-locale', newLocale);
+      // Also set it in sessionStorage for immediate persistence
+      sessionStorage.setItem('current-locale', newLocale);
+    }
+  }
+});
+
+// Additional watcher to ensure locale persistence during navigation
+watch(() => router.currentRoute.value.path, () => {
+  // Restore locale after route changes
+  if (process.client) {
+    const savedLocale = localStorage.getItem('preferred-locale');
+    if (savedLocale && savedLocale !== locale.value) {
+      console.log('Restoring locale after route change:', savedLocale);
+      setLocale(savedLocale);
     }
   }
 });
@@ -259,8 +283,25 @@ onMounted(() => {
     const savedLocale = localStorage.getItem('preferred-locale');
     if (savedLocale && savedLocale !== locale.value) {
       console.log('Restoring saved locale:', savedLocale);
-      locale.value = savedLocale;
+      // Use setLocale to properly set the locale
+      setLocale(savedLocale);
     }
+    
+    // Add visibility change listener to restore locale
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        const savedLocale = localStorage.getItem('preferred-locale');
+        if (savedLocale && savedLocale !== locale.value) {
+          console.log('Restoring locale on visibility change:', savedLocale);
+          setLocale(savedLocale);
+        }
+      }
+    };
+    
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
+    // Store the handler for cleanup
+    window._visibilityHandler = handleVisibilityChange;
   }
   
   window.addEventListener('scroll', handleScroll);
@@ -269,6 +310,12 @@ onMounted(() => {
   onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll);
     document.removeEventListener('click', handleClickOutside);
+    
+    // Clean up visibility change listener
+    if (process.client && window._visibilityHandler) {
+      document.removeEventListener('visibilitychange', window._visibilityHandler);
+      delete window._visibilityHandler;
+    }
   });
 });
 
@@ -277,7 +324,6 @@ async function switchLanguage(newLocale) {
   
   try {
     // Use the setLocale method from i18n for proper locale switching
-    const { setLocale } = useI18n();
     await setLocale(newLocale);
     
     // Navigate to the new locale path if needed
