@@ -52,10 +52,11 @@
             <li
               v-for="(contact, index) in contacts"
               :key="index"
-              class="flex items-center space-x-2"
+              class="flex items-center gap-2"
+              :class="{ 'flex-row-reverse': isRTL }"
             >
               <Icon :name="contact.icon" class="w-5 h-5" />
-              <span>{{ contact.value }}</span>
+              <span :class="{ 'ltr': contact.icon === 'mdi:phone' }">{{ contact.value }}</span>
             </li>
           </ul>
         </div>
@@ -114,11 +115,6 @@ const socials = [
     icon: "mdi:linkedin",
     url: "https://www.linkedin.com/company/guestcompanion",
   },
-  {
-    name: "Facebook",
-    icon: "mdi:facebook",
-    url: "https://www.facebook.com/guestcompanion.com",
-  },
 ];
 
 // Smooth scroll function
@@ -135,3 +131,10 @@ const scrollToSection = (sectionId) => {
   }
 };
 </script>
+
+<style scoped>
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+</style>

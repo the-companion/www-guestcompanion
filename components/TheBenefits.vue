@@ -24,13 +24,10 @@
             <div
               v-for="(benefit, index) in benefits"
               :key="index"
-              class="flex items-start"
+              class="flex items-start gap-4"
               :class="{ 'flex-row-reverse text-right': isRTL }"
             >
-              <div
-                class="flex-shrink-0 h-6 w-6 bg-gray-800 rounded-full"
-                :class="{ 'ml-4': isRTL, 'mr-4': !isRTL }"
-              ></div>
+              <div class="flex-shrink-0 h-6 w-6 bg-gray-800 rounded-full"></div>
               <div>
                 <h3 class="text-xl font-semibold text-gray-800">
                   {{ $t(`benefits.${benefit}.title`) }}

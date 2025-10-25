@@ -17,9 +17,9 @@
             <div
               v-for="(item, index) in contactInfo"
               :key="index"
-              class="flex items-center space-x-4"
+              class="flex items-center gap-4"
               :class="{
-                'flex-row-reverse space-x-reverse': $i18n.locale.dir === 'rtl',
+                'flex-row-reverse': $i18n.locale.dir === 'rtl',
               }"
             >
               <div
@@ -29,7 +29,7 @@
               </div>
               <div>
                 <h4 class="font-semibold text-xl">{{ $t(item.title) }}</h4>
-                <p class="text-gray-300">{{ $t(item.value) }}</p>
+                <p class="text-gray-300" :class="{ 'ltr': item.icon === 'mdi:phone' }">{{ $t(item.value) }}</p>
               </div>
             </div>
           </div>
@@ -209,3 +209,10 @@ const handleSubmit = async () => {
   }
 };
 </script>
+
+<style scoped>
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+</style>
