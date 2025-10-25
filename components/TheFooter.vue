@@ -53,7 +53,6 @@
               v-for="(contact, index) in contacts"
               :key="index"
               class="flex items-center space-x-2"
-              :class="{ 'flex-row-reverse space-x-reverse': isRTL }"
             >
               <Icon :name="contact.icon" class="w-5 h-5" />
               <span>{{ contact.value }}</span>

@@ -15,6 +15,8 @@
     },
     "features": {
         "title": "Fonctionnalités Clés",
+        "badge": "Fonctionnalités Clés",
+        "description": "Découvrez les fonctionnalités puissantes qui transforment votre hôtel en une expérience numérique de premier plan",
         "foodOrdering": {
             "title": "Commande de Repas",
             "desc": "Passez des commandes de service en chambre sans effort via notre interface intuitive"

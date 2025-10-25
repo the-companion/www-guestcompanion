@@ -5,13 +5,13 @@
       <!-- Hero Header -->
       <div class="text-center mb-16">
         <div class="inline-block px-6 py-2 bg-gray-200 rounded-full mb-6">
-          <span class="text-gray-700 text-sm font-medium tracking-wider uppercase">Key Features</span>
+          <span class="text-gray-700 text-sm font-medium tracking-wider uppercase">{{ $t("features.badge") }}</span>
         </div>
         <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
           {{ $t("features.title") }}
         </h2>
         <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Discover the powerful features that transform your hotel into a digital-first experience
+          {{ $t("features.description") }}
         </p>
       </div>
 
